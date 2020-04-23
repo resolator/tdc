@@ -1,6 +1,13 @@
 # tdc
 in-Terminal Development Configs - configs that make your in-terminal development more efficient and comfortable.
 
+## Installation
+Just clone this repo and run `install.sh`.
+
+## Theme switching
+The default theme is `light`. You can switch between themes using `~/set_theme.sh <THEME_NAME>`.
+Now available themes are "light" and "dark".
+
 ## Features
 ### tmux
 - Based on [Oh My Tmux!](https://github.com/gpakosz/.tmux) config.
