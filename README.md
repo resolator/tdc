@@ -8,6 +8,14 @@ Just clone this repo and run `install.sh`.
 The default theme is `light`. You can switch between themes using `~/set_theme.sh <THEME_NAME>`.
 Now available themes are "light" and "dark".
 
+## Examples
+### Light theme
+![light_example.png](content/light_example.png?raw=true) 
+
+### Dark theme
+![dark_example.png](content/dark_example.png?raw=true) 
+
+
 ## Features
 ### tmux
 - Based on [Oh My Tmux!](https://github.com/gpakosz/.tmux) config.
