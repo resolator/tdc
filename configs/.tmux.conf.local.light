@@ -141,7 +141,7 @@ tmux_conf_theme_window_status_bell_bg='default'
 tmux_conf_theme_window_status_bell_attr='blink,bold'
 
 # window last status style
-tmux_conf_theme_window_status_last_fg='#000000'         # light blue
+tmux_conf_theme_window_status_last_fg='#99b6d3'         # light blue
 tmux_conf_theme_window_status_last_bg='default'
 tmux_conf_theme_window_status_last_attr='none'
 
@@ -180,7 +180,7 @@ tmux_conf_theme_right_separator_sub='|'
 #     - #{username}
 #     - #{username_ssh}
 tmux_conf_theme_status_left='#{?uptime_y, #{uptime_y}y,}#{?uptime_d, #{uptime_d}d,}#{?uptime_h, #{uptime_h}h,}#{?uptime_m, #{uptime_m}m,} '
-tmux_conf_theme_status_right='#{prefix}#{pairing}#{synchronized} #{?battery_status, #{battery_status},}#{?battery_percentage,#{battery_percentage},} , %R , %d %b | #(curl wttr.in/?format=1) '
+tmux_conf_theme_status_right='#{prefix}#{pairing}#{synchronized} #{?battery_status, #{battery_status},}#{?battery_percentage,#{battery_percentage},} , #(echo "🌡️ CPU: $(expr substr $(cat /sys/class/thermal/thermal_zone0/temp) 1 2)°C") , %R , %d %b , #(curl wttr.in/?format=1) '
 
 # status left style
 tmux_conf_theme_status_left_fg='#000000'  # black, white , white
@@ -188,9 +188,9 @@ tmux_conf_theme_status_left_bg='#f0f0f0'  # yellow, pink, white blue
 tmux_conf_theme_status_left_attr='bold'
 
 # status right style
-tmux_conf_theme_status_right_fg='#000000,#000000,#000000' # light gray, white, black
-tmux_conf_theme_status_right_bg='#f0f0f0,#f0f0f0,#f0f0f0' # dark gray, red, white
-tmux_conf_theme_status_right_attr='none,none,bold'
+tmux_conf_theme_status_right_fg='#000000,#000000,#000000,#000000,#000000'
+tmux_conf_theme_status_right_bg='#f0f0f0,#f0f0f0,#f0f0f0,#f0f0f0,#f0f0f0'
+tmux_conf_theme_status_right_attr='none,none,none,none,none'
 
 # pairing indicator
 tmux_conf_theme_pairing='👓 '          # U+1F453
@@ -205,10 +205,10 @@ tmux_conf_theme_prefix_bg='none'
 tmux_conf_theme_prefix_attr='none'
 
 # root indicator
-tmux_conf_theme_root=''
-tmux_conf_theme_root_fg='none'
-tmux_conf_theme_root_bg='none'
-tmux_conf_theme_root_attr='none'
+#tmux_conf_theme_root=''
+#tmux_conf_theme_root_fg='none'
+#tmux_conf_theme_root_bg='none'
+#tmux_conf_theme_root_attr='none'
 
 # synchronized indicator
 tmux_conf_theme_synchronized='🔒'     # U+1F512
@@ -226,7 +226,6 @@ tmux_conf_battery_bar_symbol_empty='◻'
 #   - auto
 #   - a number, e.g. 5
 tmux_conf_battery_bar_length='0'
-#tmux_conf_battery_bar_length='auto'
 
 # battery bar palette, possible values are:
 #   - gradient (default)
