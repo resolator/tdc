@@ -65,7 +65,7 @@ unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
-xterm*|rxvt*)
+xterm*|rxvt*|screen-*color)
 	if [ $(cat /proc/1/cgroup | grep -c docker) -gt 0 ]; then
 		PS1="\$(echo \"\[\033[01;32m\]\360\237\220\263\") \[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
 	else
