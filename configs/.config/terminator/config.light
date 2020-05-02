@@ -66,3 +66,4 @@
     background_color = "#f0f0f0"
     cursor_color = "#aaaaaa"
     foreground_color = "#000000"
+    show_titlebar = False

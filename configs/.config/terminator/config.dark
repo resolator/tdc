@@ -59,3 +59,4 @@
 [profiles]
   [[default]]
     cursor_color = "#aaaaaa"
+    show_titlebar = False
