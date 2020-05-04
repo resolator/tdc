@@ -122,6 +122,6 @@ if ! shopt -oq posix; then
 fi
 
 # docker alias completion
-alias rdrun='docker run --runtime nvidia --shm-size 8G -e TERM=$TERM -e UNAME=$(whoami) -e UID=$(id -u) -e GID=$(id -g) -e DISPLAY=unix$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -it -v $HOME/data:/data -v $HOME/repos:/repos'
+alias rdrun='docker run --runtime nvidia --shm-size 8G -e TERM=$TERM -e UNAME=$(whoami) -e UID=$(id -u) -e GID=$(id -g) -e DISPLAY=unix$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v /etc/localtime:/etc/localtime:ro -v $HOME/data:/data -v $HOME/repos:/repos -it'
 # enable completion for the alias
 complete -F _complete_alias rdrun
