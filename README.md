@@ -25,6 +25,7 @@ Now available themes are "light" and "dark".
 ### bash
 - Added [complete-alias](https://github.com/cykerway/complete-alias) fix for alias completion.
 - Added the `rdrun` alias for [rdi](https://github.com/resolator/rdi) docker image.
+- Added the `sudo-apt-upgrade` alias for single command software update.
 - Added additional .bashrc which is adopted for light theme.
 - When the .bashrc is used in docker the prompt starts from ":whale: ".
 - Increased $HISTSIZE to 10000 and $HISTFILESIZE to 20000.
