@@ -58,6 +58,7 @@
 [plugins]
 [profiles]
   [[default]]
+    audible_bell = True
     cursor_color = "#aaaaaa"
     show_titlebar = False
     scrollbar_position = hidden
