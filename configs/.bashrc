@@ -134,6 +134,7 @@ alias rdrun='docker run ${RDRUN_GPU_AVAILABLE}--shm-size 8G -e TERM=$TERM -e UNA
 alias sudo-apt-upgrade='sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y'
 alias bell-ping='ping -a 8.8.8.8'
 alias dir-size='du -hs ./'
+alias count='echo -n "Items number: " && ls | wc -l'
 
 # enable completion for the alias
 complete -F _complete_alias rdrun
