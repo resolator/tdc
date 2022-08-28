@@ -135,6 +135,7 @@ alias sudo-apt-upgrade='sudo apt update && sudo apt upgrade -y && sudo apt autor
 alias bell-ping='ping -a 8.8.8.8'
 alias dir-size='du -hs ./'
 alias count='echo -n "Items number: " && ls | wc -l'
+alias gpra='git pull --rebase --autostash'
 
 # enable completion for the alias
 complete -F _complete_alias rdrun
