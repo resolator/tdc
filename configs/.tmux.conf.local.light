@@ -180,7 +180,7 @@ tmux_conf_theme_right_separator_sub='|'
 #     - #{username}
 #     - #{username_ssh}
 tmux_conf_theme_status_left='#{?uptime_y, #{uptime_y}y,}#{?uptime_d, #{uptime_d}d,}#{?uptime_h, #{uptime_h}h,}#{?uptime_m, #{uptime_m}m,} '
-tmux_conf_theme_status_right='#{prefix}#{pairing}#{synchronized} #{?battery_status, #{battery_status},}#{?battery_percentage,#{battery_percentage},} , #(echo "🌡️ CPU: $(expr substr $(cat /sys/class/thermal/thermal_zone0/temp) 1 2)°C") , %R , %d %b , #(curl wttr.in/?format=1) '
+tmux_conf_theme_status_right='#{prefix}#{pairing}#{synchronized} #{?battery_status, #{battery_status},}#{?battery_percentage,#{battery_percentage},} , #(echo "🌡️ CPU: $(expr substr $(cat /sys/class/thermal/thermal_zone0/temp) 1 2)°C") , %R , %d %b '
 
 # status left style
 tmux_conf_theme_status_left_fg='#000000'  # black, white , white
@@ -189,8 +189,8 @@ tmux_conf_theme_status_left_attr='bold'
 
 # status right style
 tmux_conf_theme_status_right_fg='#000000,#000000,#000000,#000000,#000000'
-tmux_conf_theme_status_right_bg='#f0f0f0,#f0f0f0,#f0f0f0,#f0f0f0,#f0f0f0'
-tmux_conf_theme_status_right_attr='none,none,none,none,none'
+tmux_conf_theme_status_right_bg='#f0f0f0,#f0f0f0,#f0f0f0,#f0f0f0'
+tmux_conf_theme_status_right_attr='none,none,none,none'
 
 # pairing indicator
 tmux_conf_theme_pairing='👓 '          # U+1F453
