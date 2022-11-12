@@ -121,6 +121,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# export local python binaries
+export PATH="$HOME/.local/bin:$PATH"
+
 # docker alias completion
 if ! command -v COMMAND &> /dev/null
 then
