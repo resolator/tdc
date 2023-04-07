@@ -121,19 +121,19 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# docker alias completion
-if ! command -v COMMAND &> /dev/null
-then
-  RDRUN_GPU_AVAILABLE=' '
-else
-  RDRUN_GPU_AVAILABLE=' --gpus all'
-fi
-
 # export local python binaries
 export PATH="$HOME/.local/bin:$PATH"
 
+# docker alias completion
+if ! command -v nvidia-smi &> /dev/null
+then
+  RDRUN_GPU_AVAILABLE=''
+else
+  RDRUN_GPU_AVAILABLE='--gpus all'
+fi
+
 # custom aliases
-alias rdrun='docker run ${RDRUN_GPU_AVAILABLE}--shm-size 8G -e TERM=$TERM -e UNAME=$(whoami) -e UID=$(id -u) -e GID=$(id -g) -e DISPLAY=unix$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v /etc/localtime:/etc/localtime:ro -v $HOME/data:/data -v $HOME/repos:/repos -it'
+alias rdrun='docker run ${RDRUN_GPU_AVAILABLE} --shm-size 8G -e TERM=$TERM -e UNAME=$(whoami) -e UID=$(id -u) -e GID=$(id -g) -e DISPLAY=unix$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v /etc/localtime:/etc/localtime:ro -v $HOME/data:/data -v $HOME/repos:/repos -it'
 alias sudo-apt-upgrade='sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y'
 alias bell-ping='ping -a 8.8.8.8'
 alias dir-size='du -hs ./'
