@@ -1,5 +1,5 @@
 # tdc
-in-Terminal Development Configs - configs that make your in-terminal development more efficient and comfortable.
+in-Terminal Development Configs - my personal configs for terminator, tmux and bash.
 
 ## Installation
 Just clone this repo and run `install.sh`.
@@ -31,6 +31,8 @@ Now available themes are "light" and "dark".
 - Increased $HISTSIZE to 10000 and $HISTFILESIZE to 20000.
 
 ### terminator
+- Created dark and light theme (default is light)
+- The default font is `Ubuntu Sans Mono 11`
 - Removed all hotkeys and assined new:
   - `CTRL+SHIFT+N`: new tab
   - `CTRL+SHIFT+R`: rename tab
@@ -40,8 +42,8 @@ Now available themes are "light" and "dark".
   - `CTRL+SHIFT+S`: hide/show scroll bar
   - `CTRL+SHIFT+C`: copy
   - `CTRL+SHIFT+V`: paste
+  - `CTRL+SHIFT+F`: search
   - `CTRL++`: zoom in
   - `CTRL+-`: zoom out
   - `CTRL+0`: zoom reset
   - `F11`: go in/out fullscreen mode
-- Created dark and light theme (default is light)

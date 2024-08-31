@@ -41,7 +41,7 @@
   resize_up = None
   rotate_ccw = None
   rotate_cw = None
-  search = None
+  search = <Primary><Shift>f
   split_horiz = None
   split_vert = None
   toggle_zoom = None
@@ -58,6 +58,8 @@
 [plugins]
 [profiles]
   [[default]]
+    use_system_font = False
+    font = "Ubuntu Sans Mono 12"
     audible_bell = True
     cursor_color = "#aaaaaa"
     show_titlebar = False
